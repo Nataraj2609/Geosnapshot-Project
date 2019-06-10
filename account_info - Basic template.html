@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard-GeoSnapShot</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+<style>
+          .imgwidthsetter{
+            max-width: 60px;
+            max-height: auto;
+          }
+          body{
+            background-color: #d9d9d9; 
+            width:100%;
+          }
+          .navbar{
+            padding-left: 5%;
+            padding-right: 5%;
+          }
+          #brandheader{
+            font-style: bold;
+            color: #000;
+            font-weight: 2%;
+          }
+          .navbar-default .navbar-nav > .active > a, 
+          .navbar-default .navbar-nav > .active > a:hover, 
+          .navbar-default .navbar-nav > .active > a:focus {
+                  color: #0f8866;
+            background-color: #cef5ea;
+           }
+           .main_content{
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+           }
+           .grey_fonts{
+            color:#8c8c8c;
+           }
+           #caption{
+            padding-left: 8%;
+           }
+          th { 
+            background: #e6e6e6; 
+            color: black; 
+            font-weight: bold; 
+          }
+          td, th { 
+            text-align: left; 
+          }
+          .event_names{
+            color: #21e0ea;
+          }
+          
+
+
+ @media (min-width: 768px){
+     #menu_icon{
+      display: none;
+    }
+    .navbar-nav{
+      display: initial;
+    }
+ }
+
+ @media (max-width: 768px){
+    .navbar-nav{
+      display: none;
+    }
+    table, thead, tbody, td, tr {
+      display: block;
+      border-style: none;
+    }
+    th{
+      display: none;
+    }
+     .imgwidthsetter{
+            max-width: 80px;
+            max-height: auto;
+          }
+
+    .navbar{
+            padding-left: 5%;
+            padding-right: 5%;
+          }
+          #brandheader{
+            font-style: bold;
+            color: #000;
+            font-weight: 2%;
+          }
+          .navbar-default .navbar-nav > .active > a, 
+          .navbar-default .navbar-nav > .active > a:hover, 
+          .navbar-default .navbar-nav > .active > a:focus {
+                  color: #0f8866;
+            background-color: #cef5ea;
+           }
+           .main_content{
+            width: 100%;
+            margin-left: 0%;
+            margin-right: 0%;
+           }
+           .grey_fonts{
+            color:#8c8c8c;
+           }
+           #caption{
+            display: none;
+           }          
+          td { 
+            text-align: left; 
+            display: inline-block;
+
+          }
+          .event_names{
+            color: #21e0ea;
+          }  
+          body{
+            font-size: 12px;
+          } 
+
+ }
+</style>
+<script>
+  $(document).ready(function(){
+
+    //For displaying Tooltip
+     $('[data-toggle="tooltip"]').tooltip();   
+      $("#menu_icon").click(function(){
+          $(".navbar-nav").slideToggle("slow");
+      });
+  });
+  //This function is implemented to show navbar menu when respnsive change from mobile to desktop especially when hidden at mobile viewport
+  $(window).resize(function(){   
+       if ($('body').width() > 767 ){
+              // is mobile device
+              $(".navbar-nav").show("slow");
+       }   
+    
+});
+</script>
+</head>
+<body>
+  <!-- @author nataraj - https://github.com/Nataraj2609 --->
+  <!-- All the div used in this page ends with 'account_info' tag to represent this account info page-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" id="brandheader" href="#">GEOSNAPSHOT</a>
+      <i class="fas fas fa-bars navbar-brand pull-right" id="menu_icon"></i>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li ><a href="#">My dashboard</a></li>
+      <li><a href="#">My events</a></li>
+      <li><a href="#">My album</a></li>
+      <li class="active"><a href="#">Account</a></li>
+      <li><a href="#"><i class="fa fa-power-off fa-fw" aria-hidden="true"></i></a></li>
+    </ul>
+  </div>
+</nav>
+    <div class="main_content">
+      <h3 id="caption">My Account</h3> 
+   
+        <div class="container">
+            <div class="jumbotron">
+              <div class="table-responsive">          
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Event Name</th>
+                        <th>Photos Sold</th>
+                        <th>Total Views</th>
+                        <th>Sales Earned</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span>
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTg1CJLTFs_IWvbod8dOVEtIyNuLE9PF39Lm2RB99w2an3qQTe" class=" imgwidthsetter"/></span></td>
+                        <td><span class="event_names">Tower Running Challenge</span> <br> Feb 27, 2016</td>
+                        <td>0<br><span class="grey_fonts">Free : 0</span></td>
+                        <td>1360<br><span class="grey_fonts">Unique : 89</span></td>
+                        <td><strong>$66.67 AUD</strong></td>
+                        <td><span class="label label-success" data-toggle="tooltip" data-html="true" title="<strong>New Sale</strong><br> Payment yet not <br>received for sale">New Sale</span></td>
+                      </tr>
+
+
+                      <!--Repeated Table rows for visualisation-->
+                       <tr>
+                        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTg1CJLTFs_IWvbod8dOVEtIyNuLE9PF39Lm2RB99w2an3qQTe" class="imgwidthsetter"/></td>
+                        <td><span class="event_names">Mountain climbing and Running Challenge with Dinner</span> <br> Feb 27, 2016</td>
+                        <td>0<br><span class="grey_fonts">Free : 0</span></td>
+                        <td>1360<br><span class="grey_fonts">Unique : 89</span></td>
+                        <td><strong>$66.67 AUD</strong></td>
+                        <td><span class="label label-success" data-toggle="tooltip" data-html="true" title="<strong>New Sale</strong><br> Payment yet not <br>received for sale">New Sale</span></td>
+                      </tr>
+                       <tr>
+                        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTg1CJLTFs_IWvbod8dOVEtIyNuLE9PF39Lm2RB99w2an3qQTe" class="imgwidthsetter"/></td>
+                        <td><span class="event_names">Tower Running Challenge</span> <br> Feb 27, 2016</td>
+                        <td>0<br><span class="grey_fonts">Free : 0</span></td>
+                        <td>1360<br><span class="grey_fonts">Unique : 89</span></td>
+                        <td><strong>$66.67 AUD</strong></td>
+                        <td><span class="label label-success" data-toggle="tooltip" data-html="true" title="<strong>New Sale</strong><br> Payment yet not <br>received for sale">New Sale</span></td>
+                      </tr>
+                       <tr>
+                        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTg1CJLTFs_IWvbod8dOVEtIyNuLE9PF39Lm2RB99w2an3qQTe" class="imgwidthsetter"/></td>
+                        <td><span class="event_names">Tower Running Challenge</span> <br> Feb 27, 2016</td>
+                        <td>0<br><span class="grey_fonts">Free : 0</span></td>
+                        <td>1360<br><span class="grey_fonts">Unique : 89</span></td>
+                        <td><strong>$66.67 AUD</strong></td>
+                        <td><span class="label label-success" data-toggle="tooltip" data-html="true" title="<strong>New Sale</strong><br> Payment yet not <br>received for sale">New Sale</span></td>
+                      </tr>
+                       <tr>
+                        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTg1CJLTFs_IWvbod8dOVEtIyNuLE9PF39Lm2RB99w2an3qQTe" class="imgwidthsetter"/></td>
+                        <td><span class="event_names">Tower Running Challenge</span> <br> Feb 27, 2016</td>
+                        <td>0<br><span class="grey_fonts">Free : 0</span></td>
+                        <td>1360<br><span class="grey_fonts">Unique : 89</span></td>
+                        <td><strong>$66.67 AUD</strong></td>
+                        <td><span class="label label-success" data-toggle="tooltip" data-html="true" title="<strong>New Sale</strong><br> Payment yet not <br>received for sale">New Sale</span></td>
+                      </tr>
+                       <tr>
+                        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTg1CJLTFs_IWvbod8dOVEtIyNuLE9PF39Lm2RB99w2an3qQTe" class="imgwidthsetter"/></td>
+                        <td><span class="event_names">Tower Running Challenge</span> <br> Feb 27, 2016</td>
+                        <td>0<br><span class="grey_fonts">Free : 0</span></td>
+                        <td>1360<br><span class="grey_fonts">Unique : 89</span></td>
+                        <td><strong>$66.67 AUD</strong></td>
+                        <td><span class="label label-success" data-toggle="tooltip" data-html="true" title="<strong>New Sale</strong><br> Payment yet not <br>received for sale">New Sale</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+           </div> 
+      </div>
+  </div>
+
+</body>
+</html> 
